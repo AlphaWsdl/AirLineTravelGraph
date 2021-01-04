@@ -7,7 +7,7 @@ namespace AirLineTravelGraph
 {
     class Program
     {
-        private static string hostname = "emmanueldev.gremlin.cosmos.azure.com";// "yourhostname.gremlin.cosmosdb.azure.com"; https://emmanueldev.documents.azure.com:443/
+        private static string hostname = "emmanueldev.gremlin.cosmos.azure.com";// https://emmanueldev.documents.azure.com:443/
         private static int port = 443;
         private static string authKey = "NxjAXAYS3qOCQv2ZKK6iDk7DJL8op5EiMCe7cLPVPAEBWg0FS3j8BnVdNwPxx6DedD2Asdna86GaGi3viesYeA==";
         private static string database = "my-airline-db";
