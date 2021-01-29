@@ -7,12 +7,12 @@ namespace AirLineTravelGraph
 {
     class Program
     {
-        private static string hostname = "emmanueldev.gremlin.cosmos.azure.com";// https://emmanueldev.documents.azure.com:443/
+        private static string hostname = "emmacosmos.gremlin.cosmos.azure.com";
         private static int port = 443;
-        private static string authKey = "NxjAXAYS3qOCQv2ZKK6iDk7DJL8op5EiMCe7cLPVPAEBWg0FS3j8BnVdNwPxx6DedD2Asdna86GaGi3viesYeA==";
-        private static string database = "my-airline-db";
-        private static string collection = "Airline1";
-        static async Task Main(string[] args)
+        private static string authKey = "bEtnhLU5vuwh28rmSTvxWQNZiKBAznXM94kbrST4MgfwQpPnJaosvbIN1i5U6dc3enmJffR3CTBpqO48xacZYw==";
+        private static string database = "AirlineGremlin";
+        private static string collection = "AirLine1";
+        static async Task Main(string[] args) // write exram and apply optimization
         {
             var gremlinServer = new GremlinServer(
                hostname, port,
