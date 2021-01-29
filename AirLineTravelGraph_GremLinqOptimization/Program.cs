@@ -41,12 +41,12 @@ namespace AirLineTravelGraph_GremLinqOptimization
         {
             await _g.V().Drop();
 
-            Task[] tasks = new Task[airplanes.Count];
+            List<Task> tasks = new List<Task>();
             for (int i = 0; i < airplanes.Count; i++)
             {
-                tasks[i] = CreateAVertex(airplanes[i]);
+                tasks.Add(CreateAVertex(airplanes[i]));
             }
-            Task.WaitAll(tasks);
+            Task.WaitAll(tasks.ToArray());
         }
 
 
@@ -63,17 +63,18 @@ namespace AirLineTravelGraph_GremLinqOptimization
         {
             Console.WriteLine("Connecting Vertices");
 
-            var tasks = new List<Task>();
-
-            tasks.Add(CreateVertexRelationShip("Terminal 1", "Terminal 2"));
-            tasks.Add(CreateVertexRelationShip("Terminal 2", "Terminal 3"));
-            tasks.Add(CreateVertexRelationShip("Terminal 3", "Terminal 4"));
-            tasks.Add(CreateVertexRelationShip("Terminal 3", "Terminal 5"));
-            tasks.Add(CreateVertexRelationShip("Terminal 3", "Terminal 6"));
-            tasks.Add(CreateVertexRelationShip("Terminal 7", "Terminal 8"));
-            tasks.Add(CreateVertexRelationShip("Terminal 8", "Terminal 7"));
-            tasks.Add(CreateVertexRelationShip("Terminal 7", "Terminal 9"));
-            tasks.Add(CreateVertexRelationShip("Terminal 9", "Terminal 10"));
+            var tasks = new List<Task>
+            {
+                CreateVertexRelationShip("Terminal 1", "Terminal 2"),
+                CreateVertexRelationShip("Terminal 2", "Terminal 3"),
+                CreateVertexRelationShip("Terminal 3", "Terminal 4"),
+                CreateVertexRelationShip("Terminal 3", "Terminal 5"),
+                CreateVertexRelationShip("Terminal 3", "Terminal 6"),
+                CreateVertexRelationShip("Terminal 7", "Terminal 8"),
+                CreateVertexRelationShip("Terminal 8", "Terminal 7"),
+                CreateVertexRelationShip("Terminal 7", "Terminal 9"),
+                CreateVertexRelationShip("Terminal 9", "Terminal 10")
+            };
 
             Task.WaitAll(tasks.ToArray());
 
@@ -85,7 +86,6 @@ namespace AirLineTravelGraph_GremLinqOptimization
         {
             Console.WriteLine("Calculating Adjacency of Vertices");
 
-            var tasks = new List<Task<int>>();
             long result = 0;
 
             result = _g.V("Terminal 1").Both().Count().GetAwaiter().GetResult().FirstOrDefault();

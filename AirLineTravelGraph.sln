@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirLineTravelGraph", "AirLineTravelGraph\AirLineTravelGraph.csproj", "{E1FA0B79-195A-4967-8F00-BB1A3086DBC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineTravelFunction", "AirlineTravelFunction\AirlineTravelFunction.csproj", "{13F937EE-67DA-4295-986B-DEE0D6ADAED6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirlineTravelFunction", "AirlineTravelFunction\AirlineTravelFunction.csproj", "{13F937EE-67DA-4295-986B-DEE0D6ADAED6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirLineTravelGraph_GremLinqOptimization", "AirLineTravelGraph_GremLinqOptimization\AirLineTravelGraph_GremLinqOptimization.csproj", "{430271AC-5E14-4B74-B2F3-154861638CCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{13F937EE-67DA-4295-986B-DEE0D6ADAED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13F937EE-67DA-4295-986B-DEE0D6ADAED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13F937EE-67DA-4295-986B-DEE0D6ADAED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430271AC-5E14-4B74-B2F3-154861638CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430271AC-5E14-4B74-B2F3-154861638CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430271AC-5E14-4B74-B2F3-154861638CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430271AC-5E14-4B74-B2F3-154861638CCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
