@@ -27,7 +27,8 @@ namespace AirLineTravelGraph_GremLinqOptimization
         {
             await CreateVertices(AirPlane.LoadAirPlaneInfos());
             await ConnectVertices();
-            await CalculateVertexAdjacency();
+            //await CalculateVertexAdjacency();
+            await CalculateVertexAdjacency_Update();
         }
 
 
@@ -117,6 +118,33 @@ namespace AirLineTravelGraph_GremLinqOptimization
 
             result = _g.V("Terminal 10").Both().Count().GetAwaiter().GetResult().FirstOrDefault();
             Console.WriteLine($"For City 10, the count is =>  { result}");
+        }
+
+        public async Task CalculateVertexAdjacency_Update()  
+        {
+            Console.WriteLine("Calculating Adjacency of Vertices");
+
+            List<long> result = new List<long>();
+
+            result = _g.V().Both().Count().GetAwaiter().GetResult().ToList();
+
+            var entityGroups = await _g
+               .V()
+               .Group(g => g
+                   .ByKey(__ => __.Id())
+                   .ByValue(__ => __.Both().Count()))
+               .FirstAsync();
+
+            foreach (var entityGroup in entityGroups.OrderBy(i => i.Key))
+            {
+                Console.WriteLine($"For {(entityGroup.Key).ToString().Replace("Terminal", "City")}, the count is =>  { (entityGroup.Value) }");
+            }
+
+            var minCount = entityGroups.OrderBy(i => i.Value).FirstOrDefault().Value;
+            var maxCount = entityGroups.OrderByDescending(i => i.Value).FirstOrDefault().Value;
+
+            Console.WriteLine($"\nThe MAXIMUM adjecent route count is {maxCount}");
+            Console.WriteLine($"The MINIMUM adjecent route count is {minCount}");
         }
     }
 }
