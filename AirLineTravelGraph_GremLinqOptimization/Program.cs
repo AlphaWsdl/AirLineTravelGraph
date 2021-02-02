@@ -66,15 +66,15 @@ namespace AirLineTravelGraph_GremLinqOptimization
 
             var tasks = new List<Task>
             {
-                CreateVertexRelationShip("Terminal 1", "Terminal 2"),
-                CreateVertexRelationShip("Terminal 2", "Terminal 3"),
-                CreateVertexRelationShip("Terminal 3", "Terminal 4"),
-                CreateVertexRelationShip("Terminal 3", "Terminal 5"),
-                CreateVertexRelationShip("Terminal 3", "Terminal 6"),
-                CreateVertexRelationShip("Terminal 7", "Terminal 8"),
-                CreateVertexRelationShip("Terminal 8", "Terminal 7"),
-                CreateVertexRelationShip("Terminal 7", "Terminal 9"),
-                CreateVertexRelationShip("Terminal 9", "Terminal 10")
+                CreateVertexRelationShip("Terminal 01", "Terminal 02"),
+                CreateVertexRelationShip("Terminal 02", "Terminal 03"),
+                CreateVertexRelationShip("Terminal 03", "Terminal 04"),
+                CreateVertexRelationShip("Terminal 03", "Terminal 05"),
+                CreateVertexRelationShip("Terminal 03", "Terminal 06"),
+                CreateVertexRelationShip("Terminal 07", "Terminal 08"),
+                CreateVertexRelationShip("Terminal 08", "Terminal 07"),
+                CreateVertexRelationShip("Terminal 07", "Terminal 09"),
+                CreateVertexRelationShip("Terminal 09", "Terminal 10")
             };
 
             Task.WaitAll(tasks.ToArray());

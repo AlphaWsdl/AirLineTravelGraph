@@ -22,7 +22,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Name = "Indigo",
                     Departure = "Start",
                     Arrival = "City 1",
-                    Id = "Terminal 1"
+                    Id = "Terminal 01",
+                    Label ="Indigo"
                 },
                 new AirPlane
                 {
@@ -31,7 +32,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Arrival = "City 2",
                     DepartureTime = "7 AM",
                     ArrivalTime = "8 AM",
-                    Id = "Terminal 2"
+                    Id = "Terminal 02",
+                    Label ="Indigo"
                 },
                 new AirPlane
                 {
@@ -40,7 +42,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Arrival = "City 3",
                     DepartureTime = "5 AM",
                     ArrivalTime = "6 AM",
-                    Id = "Terminal 3"
+                    Id = "Terminal 03",
+                    Label ="Indigo"
                 },
                 new AirPlane
                 {
@@ -49,7 +52,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Arrival = "City 4",
                     DepartureTime = "9 AM",
                     ArrivalTime = "10 AM",
-                    Id = "Terminal 4"
+                    Id = "Terminal 04",
+                    Label ="Indigo"
                 },
                 new AirPlane
                 {
@@ -58,7 +62,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Arrival = "City 5",
                     DepartureTime = "5 PM",
                     ArrivalTime = "6 PM",
-                    Id = "Terminal 5"
+                    Id = "Terminal 05",
+                    Label ="Indigo"
                 },
                 new AirPlane
                 {
@@ -67,7 +72,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Arrival = "City 6",
                     DepartureTime = "3 PM",
                     ArrivalTime = "5 PM",
-                    Id = "Terminal 6"
+                    Id = "Terminal 06",
+                    Label ="Indigo"
                 },
                 new AirPlane
                 {
@@ -76,7 +82,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Arrival = "City 8",
                     DepartureTime = "7 PM",
                     ArrivalTime = "8 PM",
-                    Id = "Terminal 7"
+                    Id = "Terminal 07",
+                    Label ="Indigo"
                 },
                 new AirPlane
                 {
@@ -85,7 +92,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Arrival = "City 7",
                     DepartureTime = "9 PM",
                     ArrivalTime = "10 PM",
-                    Id = "Terminal 8"
+                    Id = "Terminal 08",
+                    Label ="Indigo"
                 },
                 new AirPlane
                 {
@@ -94,7 +102,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Arrival = "City 9",
                     DepartureTime = "11 AM",
                     ArrivalTime = "11.45 AM",
-                    Id = "Terminal 9"
+                    Id = "Terminal 09",
+                    Label ="Indigo"
                 },
                 new AirPlane
                 {
@@ -103,7 +112,8 @@ namespace AirLineTravelGraph_GremLinqOptimization.Models
                     Arrival = "City 10",
                     DepartureTime = "2 PM",
                     ArrivalTime = "3 PM",
-                    Id = "Terminal 10"
+                    Id = "Terminal 10",
+                    Label ="Indigo"
                 }
             };
             return AirPlaneInfos;
