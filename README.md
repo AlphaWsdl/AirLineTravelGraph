@@ -31,4 +31,6 @@ Graphs were read and manipulated using Gremlin, a popular graph traversal langua
 
 Gremlin queries was used to construct a graph and store it inside Cosmos DB and also manipulate data.
 
+Addtionally Exrem was added to modify the queries and make it readable.
+
 
